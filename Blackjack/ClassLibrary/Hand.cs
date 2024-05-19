@@ -9,25 +9,32 @@ namespace ClassLibrary
     public class Hand
     {
         protected List<ICard> _cards = new List<ICard>();
-
+        private const int MaxXPosition = 108;
+        private const int XIncrement = 12;
+        private const int YIncrement = 8;
+        public Hand()
+        {
+            _cards = new List<ICard>();
+        }
         public virtual void AddCard(ICard card)
         {
+            if (card == null)
+                throw new ArgumentNullException(nameof(card), "Card cannot be null");
+
             _cards.Add(card);
         }
-
         public virtual void Print(int x, int y)
         {
-            foreach (var item in _cards)
+            foreach (var card in _cards)
             {
-                if (x >= 108)
+                if (x >= MaxXPosition)
                 {
                     x = 0;
-                    y += 8;
+                    y += YIncrement;
                 }
 
-
-                item.Print(x, y);
-                x += 12;
+                card.Print(x, y);
+                x += XIncrement;
             }
         }
     }

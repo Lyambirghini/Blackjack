@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\renat.LAPTOP-65EIJ7OI\\.nuget\\packages\\": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\renat.LAPTOP-65EIJ7OI\\Documents\\SECOND course\\Blackjack\\Blackjack\\ClassLibrary\\ClassLibrary.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\Рефакторинг\\Blackjack\\Blackjack\\ClassLibrary\\ClassLibrary.csproj",
       "projectName": "ClassLibrary",
-      "projectPath": "C:\\Users\\renat.LAPTOP-65EIJ7OI\\Documents\\SECOND course\\Blackjack\\Blackjack\\ClassLibrary\\ClassLibrary.csproj",
-      "packagesPath": "C:\\Users\\renat.LAPTOP-65EIJ7OI\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\renat.LAPTOP-65EIJ7OI\\Documents\\SECOND course\\Blackjack\\Blackjack\\ClassLibrary\\obj\\",
+      "projectPath": "C:\\Users\\User\\Desktop\\Рефакторинг\\Blackjack\\Blackjack\\ClassLibrary\\ClassLibrary.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\User\\Desktop\\Рефакторинг\\Blackjack\\Blackjack\\ClassLibrary\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\renat.LAPTOP-65EIJ7OI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -40,6 +40,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -61,16 +66,8 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\renat.LAPTOP-65EIJ7OI\\Documents\\SECOND course\\Blackjack\\Blackjack\\ClassLibrary\\obj\\project.nuget.cache : Found invalid data while decoding."
-    }
-  ]
+  }
 }

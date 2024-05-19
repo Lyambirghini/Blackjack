@@ -13,3 +13,18 @@ C:\Users\renat.LAPTOP-65EIJ7OI\Documents\SECOND course\Blackjack\Blackjack\obj\D
 C:\Users\renat.LAPTOP-65EIJ7OI\Documents\SECOND course\Blackjack\Blackjack\obj\Debug\net8.0\Blackjack.genruntimeconfig.cache
 C:\Users\renat.LAPTOP-65EIJ7OI\Documents\SECOND course\Blackjack\Blackjack\obj\Debug\net8.0\ref\Blackjack.dll
 C:\Users\renat.LAPTOP-65EIJ7OI\Documents\SECOND course\Blackjack\Blackjack\obj\Debug\net8.0\Blackjack.sourcelink.json
+C:\Users\User\Desktop\Рефакторинг\Blackjack\Blackjack\obj\Debug\net8.0\Blackjack.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\Рефакторинг\Blackjack\Blackjack\obj\Debug\net8.0\Blackjack.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\Рефакторинг\Blackjack\Blackjack\obj\Debug\net8.0\Blackjack.AssemblyInfo.cs
+C:\Users\User\Desktop\Рефакторинг\Blackjack\Blackjack\obj\Debug\net8.0\Blackjack.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Рефакторинг\Blackjack\Blackjack\obj\Debug\net8.0\Blackjack.sourcelink.json
+C:\Users\User\Desktop\Рефакторинг\Blackjack\Blackjack\obj\Debug\net8.0\Blackjack.dll
+C:\Users\User\Desktop\Рефакторинг\Blackjack\Blackjack\obj\Debug\net8.0\refint\Blackjack.dll
+C:\Users\User\Desktop\Рефакторинг\Blackjack\Blackjack\obj\Debug\net8.0\Blackjack.pdb
+C:\Users\User\Desktop\Рефакторинг\Blackjack\Blackjack\bin\Debug\net8.0\Blackjack.exe
+C:\Users\User\Desktop\Рефакторинг\Blackjack\Blackjack\bin\Debug\net8.0\Blackjack.deps.json
+C:\Users\User\Desktop\Рефакторинг\Blackjack\Blackjack\bin\Debug\net8.0\Blackjack.runtimeconfig.json
+C:\Users\User\Desktop\Рефакторинг\Blackjack\Blackjack\bin\Debug\net8.0\Blackjack.dll
+C:\Users\User\Desktop\Рефакторинг\Blackjack\Blackjack\bin\Debug\net8.0\Blackjack.pdb
+C:\Users\User\Desktop\Рефакторинг\Blackjack\Blackjack\obj\Debug\net8.0\Blackjack.genruntimeconfig.cache
+C:\Users\User\Desktop\Рефакторинг\Blackjack\Blackjack\obj\Debug\net8.0\ref\Blackjack.dll

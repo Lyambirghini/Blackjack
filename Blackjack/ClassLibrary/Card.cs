@@ -4,8 +4,11 @@ namespace ClassLibrary
 {
     public class Card : ICard
     {
-        public CardFace Face { get; private set; }
-        public CardSuit Suit { get; private set; }
+        public CardFace Face { get; }
+        public CardSuit Suit { get; }
+
+        private const int CardWidth = 9;
+        private const int CardHeight = 5;
 
         public Card(CardFace face, CardSuit suit)
         {
@@ -15,20 +18,29 @@ namespace ClassLibrary
 
         public void Print(int x, int y)
         {
-            Console.SetCursorPosition(x, y);
-
             string faceSymbol = GetFaceSymbol();
             string suitSymbol = GetSuitSymbol();
+
+            Console.SetCursorPosition(x, y);
 
             Console.ForegroundColor = Suit == CardSuit.Hearts || Suit == CardSuit.Diamonds
                 ? ConsoleColor.Red
                 : ConsoleColor.Black;
 
-            Console.WriteLine("┌───────┐");
-            Console.WriteLine($"│{faceSymbol,-2}     │");
-            Console.WriteLine($"│   {suitSymbol,-2}  │");
-            Console.WriteLine("│       │");
-            Console.WriteLine("└───────┘");
+            string[] cardLines = new string[]
+            {
+                "┌───────┐",
+                $"│{faceSymbol,-2}     │",
+                $"│   {suitSymbol,-2}  │",
+                "│       │",
+                "└───────┘"
+            };
+
+            foreach (string line in cardLines)
+            {
+                Console.SetCursorPosition(x, y++);
+                Console.WriteLine(line);
+            }
 
             Console.ResetColor();
         }

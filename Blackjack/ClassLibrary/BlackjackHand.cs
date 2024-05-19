@@ -1,13 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
+﻿
 namespace ClassLibrary
 {
     public class BlackjackHand : Hand
     {
         public int Score { get; private set; }
-        public bool IsDealer { get; set; } = false;
+        public bool IsDealer { get; set; }
+
+        private const int CardSpacing = 5;
+        private const int DealerHiddenCardOffset = 12;
 
         public BlackjackHand(bool isDealer = false)
         {
@@ -36,13 +36,20 @@ namespace ClassLibrary
                 }
             }
 
-            for (int i = 0; i < aceCount; i++)
+            // Handle aces
+            while (aceCount > 0)
             {
                 if (Score + 11 <= 21)
+                {
                     Score += 11;
+                }
                 else
+                {
                     Score += 1;
+                }
+                aceCount--;
             }
+
         }
 
         public override void Print(int x, int y)
@@ -50,10 +57,8 @@ namespace ClassLibrary
             foreach (var card in _cards)
             {
                 card.Print(x, y);
-                y += 5;
+                y += CardSpacing;
             }
-
-            Console.SetCursorPosition(x, y);
             Console.WriteLine($"Score: {Score}");
         }
         public int CountCards()
@@ -65,16 +70,17 @@ namespace ClassLibrary
         {
             if (_cards.Count > 0)
             {
-                Console.SetCursorPosition(x, y);
-                Console.WriteLine("┌───────┐");
-                Console.WriteLine("│       │");
-                Console.WriteLine("│   ?   │");
-                Console.WriteLine("│       │");
-                Console.WriteLine("└───────┘");
-
-                for (int i = 1; i < _cards.Count; i++)
+                int yOffset = 0;
+                for (int i = 0; i < _cards.Count; i++)
                 {
-                    _cards[i].Print(x, y + 12);
+                    Console.SetCursorPosition(x, y + yOffset);
+                    Console.WriteLine("┌───────┐");
+                    Console.WriteLine("│       │");
+                    Console.WriteLine("│   ?   │");
+                    Console.WriteLine("│       │");
+                    Console.WriteLine("└───────┘");
+
+                    yOffset += DealerHiddenCardOffset;
                 }
             }
         }

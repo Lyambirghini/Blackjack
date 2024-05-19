@@ -1,26 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ClassLibrary
 {
     public class Deck
     {
-        List<ICard> _cards = new List<ICard>();
+        private const int TotalSuits = 4;
+        private const int CardsPerSuit = 13;
+        private const int TotalCards = 52;
+        private List<ICard> _cards = new List<ICard>();
 
         public Deck()
         {
-            DeckMethod();
+            InitializeDeck();
+            Shuffle();
         }
 
-        public void DeckMethod()
+        // Change access modifier to public
+        public void InitializeDeck()
         {
-
-            for (int i = 0; i < 4; i++)
+            _cards.Clear();
+            for (int i = 0; i < TotalSuits; i++)
             {
-                for (int j = 0; j < 13; j++)
+                for (int j = 0; j < CardsPerSuit; j++)
                 {
                     _cards.Add(CardFactory.CreateBlackjackCard((CardFace)j, (CardSuit)i));
                 }
@@ -30,10 +32,10 @@ namespace ClassLibrary
         public void Shuffle()
         {
             Random rng = new Random();
-            for (int i = 0; i < 51; i++)
+            int n = _cards.Count;
+            for (int i = 0; i < n - 1; i++)
             {
-                int j = rng.Next(i, 52);
-
+                int j = rng.Next(i, n);
                 ICard temp = _cards[j];
                 _cards[j] = _cards[i];
                 _cards[i] = temp;
@@ -44,29 +46,31 @@ namespace ClassLibrary
         {
             if (_cards.Count == 0)
             {
-                DeckMethod();
-                Shuffle();
+                throw new InvalidOperationException("No cards left in the deck to deal.");
             }
-            ICard temp = _cards[0];
+            ICard card = _cards[0];
             _cards.RemoveAt(0);
-            return temp;
+            return card;
         }
 
         public void Print(int x, int y)
         {
-            
-            for (int i = 0; i < 52; i++)
+            const int MaxX = 108;
+            const int XIncrement = 12;
+            const int YIncrement = 8;
+
+            for (int i = 0; i < _cards.Count; i++)
             {
-                if (x >= 108)
+                if (x >= MaxX)
                 {
                     x = 0;
-                    y += 8;
+                    y += YIncrement;
                 }
 
-
                 _cards[i].Print(x, y);
-                x += 12;
+                x += XIncrement;
             }
         }
     }
 }
+    
